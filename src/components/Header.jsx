@@ -11,23 +11,15 @@ class Header extends React.Component {
 
   render() {
     return (
-      <nav>
-        <h1>Mi aplicación</h1>
-        {/*
-        <ul>{this.createMenuLinks()}</ul>
+      <nav className="header-navbar">
+        <div className="navbar-logo">
+          <img
+            className="logo-image"
+            src="https://eu01.edcwb.com/buscador/img/centros/logogrande/7348-a9c730d6b2b644f5b9910364ba6af277.jpg"
+          />
+        </div>
+        <div className="fa.futbol" />
         <ul>
-          Forma 2: map (función) 
-          {MenuItems.map(function (item) {
-            return (
-              <li>
-                <Link to={item.path}>{item.title}</Link>
-              </li>
-            );
-          })}
-        </ul>
-        */}
-        <ul>
-          {/* Forma 3: map (función flecha) */}
           {MenuItems.map((item) => {
             return (
               <li key={item.id}>
