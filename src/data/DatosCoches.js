@@ -1,33 +1,36 @@
 export const TitulosTablaCoches = {
-  id: 'Matricula',
-  field1: 'Marca',
-  field2: 'Modelo',
-  field3: 'Color',
+  id: 'Posición',
+  field1: 'Nombre',
+  field2: 'Desarroladora',
+  field3: 'PEGI',
 };
 
 export const DatosTablaCoches = [
   {
-    matricula: '0000LOL',
-    marca: 'Peugeot',
-    modelo: 'Partner',
-    color: 'Rojo',
+    posicion: '1',
+    nombre: 'League of Legends',
+    desarroladora: 'Riot Games',
+    pegi: '+3',
+    imagen:
+      'https://www.esportmaniacos.com/wp-content/uploads/2021/08/LoL2-1.jpg',
+    descripción: 'Un juego HORROROSO',
   },
   {
-    matricula: '7204FGA',
-    marca: 'Hyundai',
-    modelo: 'IX35',
-    color: 'Verde',
+    posicion: '2',
+    nombre: 'Elder Ring',
+    desarroladora: 'FromSoftware',
+    pegi: '+16',
   },
   {
-    matricula: '5050SOD',
-    marca: 'Mitshubishi',
-    modelo: 'Evo 7',
-    color: 'Blanco',
+    posicion: '3',
+    nombre: 'Lost Ark',
+    desarroladora: 'Smilegate',
+    pegi: '+12',
   },
   {
-    matricula: '0450LDL',
-    marca: 'Subaru',
-    modelo: 'Impreza',
-    color: 'Rojo',
+    posicion: '4',
+    nombre: 'New World',
+    desarroladora: 'Amazon Studios',
+    pegi: '+12',
   },
 ];
