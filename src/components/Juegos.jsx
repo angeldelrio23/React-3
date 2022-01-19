@@ -1,7 +1,7 @@
 import React from 'react';
 import { Card, Container, Table, Row, Col } from 'react-bootstrap';
-import { TitulosTablaCoches, DatosTablaCoches } from '../data/DatosCoches';
-class Coches extends React.Component {
+import { TitulosTablaJuegos, DatosTablaJuegos } from '../data/DatosJuegos';
+class Juegos extends React.Component {
   constructor(props) {
     super(props);
   }
@@ -15,14 +15,14 @@ class Coches extends React.Component {
               <Table striped bordered hover variant="dark">
                 <thead>
                   <tr>
-                    <th>{TitulosTablaCoches.id}</th>
-                    <th>{TitulosTablaCoches.field1}</th>
-                    <th>{TitulosTablaCoches.field2}</th>
-                    <th>{TitulosTablaCoches.field3}</th>
+                    <th>{TitulosTablaJuegos.id}</th>
+                    <th>{TitulosTablaJuegos.field1}</th>
+                    <th>{TitulosTablaJuegos.field2}</th>
+                    <th>{TitulosTablaJuegos.field3}</th>
                   </tr>
                 </thead>
                 <tbody>
-                  {DatosTablaCoches.map((item) => {
+                  {DatosTablaJuegos.map((item) => {
                     return (
                       <tr>
                         <td>{item.posicion} </td>
@@ -37,13 +37,13 @@ class Coches extends React.Component {
             </Col>
             <Col lg={4} md={6}>
               <Card style={{ width: '18rem' }}>
-                <Card.Img variant="top" src={DatosTablaCoches[0].imagen} />
+                <Card.Img variant="top" src={DatosTablaJuegos[0].imagen} />
                 <Card.Body>
-                  <Card.Title>{DatosTablaCoches[0].nombre}</Card.Title>
+                  <Card.Title>{DatosTablaJuegos[0].nombre}</Card.Title>
                   <Card.Text>
-                    Desarrolladora: {DatosTablaCoches[0].desarroladora}
+                    Desarrolladora: {DatosTablaJuegos[0].desarroladora}
                     <p />
-                    {DatosTablaCoches[0].descripción}
+                    {DatosTablaJuegos[0].descripción}
                   </Card.Text>
                 </Card.Body>
               </Card>
@@ -55,4 +55,4 @@ class Coches extends React.Component {
   }
 }
 
-export default Coches;
+export default Juegos;
