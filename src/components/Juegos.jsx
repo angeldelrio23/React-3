@@ -1,9 +1,27 @@
 import React from 'react';
 import { Card, Container, Table, Row, Col } from 'react-bootstrap';
 import { TitulosTablaJuegos, DatosTablaJuegos } from '../data/DatosJuegos';
+
 class Juegos extends React.Component {
   constructor(props) {
     super(props);
+    this.state = {
+      posicion: '',
+      nombre: '',
+      desarroladora: '',
+      pegi: '',
+      imagen: '',
+    };
+  }
+
+  eventoclick(item) {
+    this.setState({
+      posicion: item.posicion,
+      nombre: item.nombre,
+      desarroladora: item.desarroladora,
+      pegi: item.pegi,
+      imagen: item.imagen,
+    });
   }
   render() {
     return (
@@ -24,7 +42,7 @@ class Juegos extends React.Component {
                 <tbody>
                   {DatosTablaJuegos.map((item) => {
                     return (
-                      <tr>
+                      <tr onClick={() => this.eventoclick(item)}>
                         <td>{item.posicion} </td>
                         <td>{item.nombre} </td>
                         <td>{item.desarroladora} </td>
@@ -37,13 +55,13 @@ class Juegos extends React.Component {
             </Col>
             <Col lg={4} md={6}>
               <Card style={{ width: '18rem' }}>
-                <Card.Img variant="top" src={DatosTablaJuegos[0].imagen} />
+                <Card.Img variant="top" src={this.state.imagen} />
                 <Card.Body>
-                  <Card.Title>{DatosTablaJuegos[0].nombre}</Card.Title>
+                  <Card.Title>{this.state.nombre}</Card.Title>
                   <Card.Text>
-                    Desarrolladora: {DatosTablaJuegos[0].desarroladora}
+                    Desarrolladora: {this.state.desarroladora}
                     <p />
-                    {DatosTablaJuegos[0].descripción}
+                    {this.state.descripción}
                   </Card.Text>
                 </Card.Body>
               </Card>
